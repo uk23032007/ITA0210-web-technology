@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background GIF Example</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="gif-container"></div>
+
+    <h1 class="title">Background GIF with CSS Effects</h1>
+
+</body>
+</html>
+ <link rel="stylesheet" href="10.css">
