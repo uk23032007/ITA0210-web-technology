@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Email Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef1ff;
+            padding: 40px;
+        }
+
+        .container {
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: #4c6ef5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Email Validation</h2>
+
+        <label>Enter Email:</label>
+        <input type="text" id="email" placeholder="example@gmail.com">
+
+        <button onclick="validateEmail()">Check Email</button>
+
+        <div id="result"></div>
+    </div>
+
+
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+
+            // Regular expression for email validation
+            let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (pattern.test(email)) {
+                document.getElementById("result").style.color = "green";
+                document.getElementById("result").innerHTML = "✔ Valid Email Address";
+            } else {
+                document.getElementById("result").style.color = "red";
+                document.getElementById("result").innerHTML = "❌ Invalid Email Format";
+            }
+        }
+    </script>
+
+</body>
+</html>
