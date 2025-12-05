@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nearest Odd Number</title>
+</head>
+<body>
+
+<script>
+    // Get number from user
+    let num = parseInt(prompt("Enter a number:"));
+
+    let nearestOdd;
+
+    if (num % 2 === 0) {
+        // If even → nearest odd is num + 1 or num - 1
+        // We choose the smaller odd (num - 1)
+        nearestOdd = num - 1;
+    } else {
+        // If already odd
+        nearestOdd = num;
+    }
+
+    alert("Nearest odd number: " + nearestOdd);
+</script>
+
+</body>
+</html>
