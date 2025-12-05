@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Number Operations</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #eef5ff;
+        }
+        h2 {
+            text-align: center;
+        }
+        .box {
+            background: #fff;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        span {
+            font-weight: bold;
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JavaScript Number Operations</h2>
+
+    <div class="box">
+        <p>Exponential Value (5e3): <span id="exp"></span></p>
+    </div>
+
+    <div class="box">
+        <p>Limited Digits (3.141592 to 3 digits): <span id="fixed"></span></p>
+    </div>
+
+    <div class="box">
+        <p>Convert Number to String (12345 → "12345"): <span id="str"></span></p>
+    </div>
+
+    <div class="box">
+        <p>Return Negative Infinity: <span id="negInf"></span></p>
+    </div>
+
+    <script>
+        // 1. Exponential value
+        let expValue = 5e3;   // exponential format: 5 × 10³
+        document.getElementById("exp").innerHTML = expValue;
+
+        // 2. Limit digits after decimal
+        let num = 3.141592;
+        let fixedValue = num.toFixed(3);  // keep only 3 digits
+        document.getElementById("fixed").innerHTML = fixedValue;
+
+        // 3. Convert number to string
+        let number = 12345;
+        let strValue = number.toString();
+        document.getElementById("str").innerHTML = strValue;
+
+        // 4. Negative Infinity using Number object
+        let negInfinity = Number.NEGATIVE_INFINITY;
+        document.getElementById("negInf").innerHTML = negInfinity;
+    </script>
+
+</body>
+</html>
